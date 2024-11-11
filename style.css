@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1rem;
   font-family: "Poppins";
   font-weight: 500;
   font-style: normal;
@@ -25,6 +26,7 @@
 body {
   height: 100vh;
   width: 100%;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,18 +52,19 @@ textarea {
   margin-bottom: 30px;
   background-color: var(--base-color1);
   color: var(--base-color2);
-  font-size: 16px;
+  font-size: 1rem;
+  transition: width 0.3s ease;
 }
 
 textarea::placeholder {
   color: var(--base-color2);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 h1 {
   text-align: center;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 2.5em;
 }
 
 .container {
@@ -73,7 +76,7 @@ h1 {
 
 button {
   padding: 8px 14px;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 8px;
   border: none;
   background-color: var(--base-color1);
@@ -90,7 +93,7 @@ button {
 
 select {
   padding: 8px 20px;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 8px;
   border: none;
   background: var(--base-color1);
@@ -156,4 +159,66 @@ select {
    inset 0 4px 4px rgba(255, 255, 255, 1),
     inset 0 -4px 4px rgba(255, 255, 255, 1);
   background-image: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+
+
+/* Greater than or equal to 1000px */
+@media (width >= 1000px) {
+  *, body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  textarea {
+    width: ;
+  }
+}
+
+/* Less than or equal to 700px */
+@media (width <= 700px) {
+  *, body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  textarea {
+    width: 100%;
+  }
+}
+
+@media (width <= 500px) {
+  h1 {
+    font-size: 2.1em;
+  }
+  textarea {
+    width: 400px;
+  }
+  select {
+    width: 300px;
+  }
+}
+
+@media (width <= 400px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  textarea {
+    width: 340px;
+  }
+  select {
+    width: 260px;
+  }
+}
+
+
+/* Between 700px and 1000px */
+@media (700px <= width <= 1000px) {
+  *, body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
 }
